@@ -4,14 +4,14 @@ function ModalJob(props) {
   const [currentColor, setCurrentColor] = useState('#008000');
   const [fontSize, setfontSize] = useState(12);
 
-  const increaseFontSize = (e) => {
+  const increaseFontSize = () => {
     setfontSize(fontSize + 1);
   };
-  const decreaseFontSize = (e) => {
+  const decreaseFontSize = () => {
     setfontSize(fontSize - 1);
   };
 
-  const handleColorChange = (e) => {
+  const handleColorChange = () => {
     setCurrentColor(e.target.value);
   };
 

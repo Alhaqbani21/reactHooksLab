@@ -5,8 +5,10 @@ import CityDropdown from './CityDropdown';
 
 import RadioButton from './RadioButton';
 import ModalJob from './ModalJob';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function Hero() {
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [nameAlert, setNameAlert] = useState('');
 
@@ -42,7 +44,11 @@ function Hero() {
     }
 
     if (valid) {
-      document.getElementById('my_modal_4').showModal();
+      localStorage.setItem('name', name);
+      localStorage.setItem('selectedCity', selectedCity);
+      localStorage.setItem('genderRadio', genderRadio);
+      localStorage.setItem('englishLevel', englishLevel);
+      navigate('./job');
     }
   }
 
