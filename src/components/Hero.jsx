@@ -56,7 +56,7 @@ function Hero() {
     <>
       <div className="hero min-h-screen bg-base-300  ">
         <div className="hero-content text-center ">
-          <div className="max-w-[100vw] flex flex-col justify-center gap-5 bg-base-100 p-7 rounded lg:p-28 max-md:p-8 max-md:w-[75vw] lg:w-[90vw]">
+          <div className="max-w-[50vw] max-md:max-w-[80vw] flex flex-col justify-center gap-5 bg-base-100 p-7 rounded lg:p-28 max-md:p-8 max-md:w-[75vw] lg:w-[90vw]">
             <h1 className="text-xl max-md:text-sm text-primary">نموذج تقديم</h1>
             <Input1
               name="ادخل الأسم"
@@ -92,13 +92,13 @@ function Hero() {
               min={0}
               max="100"
               value={englishLevel}
-              className="range"
+              className="range "
               step="25"
               onChange={(e) => {
                 setEnglishLevel(e.target.value);
               }}
             />
-            <div className="flex w-full justify-between px-2 text-xs">
+            <div className="flex w-full justify-between px-2 text-xs ">
               <span>مبتدئ</span>
               <span>مستوى ما قبل المتوسط</span>
               <span>المستوى المتوسط</span>
